@@ -1,3 +1,33 @@
 .site-header {
     text-align: center;
 }
+
+.menu-wrapper {
+    position: relative;
+    left: 50%;
+    float: left;
+}
+#pagination {
+    position: relative;
+    left: -50%;
+    float: left;
+}
+
+#container {
+    margin: 20px auto;
+}
+
+.activity {
+    margin-bottom: 20px;
+    height: 250px;
+    background-color: lightblue;
+    border-right: 1px solid red;
+}
+
+div.container div.row div:nth-child(3) {
+    border-right: 0;
+}
+
+div.container div.row div:nth-child(6) {
+    border-right: 0;
+}

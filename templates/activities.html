@@ -1,6 +1,25 @@
-<div>
-    {{#activities}}
-        <div>{{provider}}</div>
-    {{/activities}}
+<div class="container">
+    <div class="row">
+        {{#activities}}
+        <div class="col-md-4 activity">
+            <div class="row content-width">
+                <div class="col-md-6">by {{actorUsername}}</div>
+                <div class="col-md-6 text-right">in {{provider}}</div>
+            </div>
+            <div class="row content-width text-center">{{activityMessage}}</div>
+            <div class="row content-width">
+                <img src="{{activityAttachment}}" alt="Image content" width="320px" height="160px" />
+            </div>
+            <div class="row content-width text-right">on {{activityDate}}</div>
+            <div class="row content-width">
+                <div class="col-md-4 text-center">Likes: {{activityLikes}}</div>
+                <div class="col-md-4 text-center">Shares: {{activityShares}}</div>
+                <div class="col-md-4 text-center">Comments: {{activityComments}}</div>
+            </div>
+        </div>
+        {{/activities}}
+    </div>
+    <div class="menu-wrapper">
+        <div id="pagination"></div>
+    </div>
 </div>
-<div id="pagination"></div>

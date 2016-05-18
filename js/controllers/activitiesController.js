@@ -28,7 +28,10 @@ app.activitiesController = (function () {
                         activityUrl: activity.activity_url,
                         activityMessage: activity.activity_message,
                         activityAttachment: activity.activity_attachment,
-                        activityDate: activity.activity_date
+                        activityDate: activity.activity_date,
+                        activityLikes: activity.activity_likes,
+                        activityShares: activity.activity_shares,
+                        activityComments: activity.activity_comments
                     });
                 });
 
@@ -51,36 +54,6 @@ app.activitiesController = (function () {
                 }
             }).done();
     };
-
-    //ActivitiesController.prototype.editLecture = function (data) {
-    //    this._model.editLecture(data)
-    //        .then(function (result) {
-    //            noty({
-    //                type: 'success',
-    //                text: 'You have successfully edited the lecture!',
-    //                timeout: '2000'
-    //            });
-    //            Sammy(function(){
-    //                this.trigger('redirectUrl', {url: '#/calendar/my/'});
-    //            });
-    //        }, function (error) {
-    //            if(error.responseText) {
-    //                var errorResponseTextObj = JSON.parse(error.responseText);
-    //                var errorDescription = errorResponseTextObj.description;
-    //                noty({
-    //                    type: 'error',
-    //                    text: errorDescription,
-    //                    timeout: '2000'
-    //                });
-    //            } else {
-    //                noty({
-    //                    type: 'error',
-    //                    text: 'Check your connection!',
-    //                    timeout: '2000'
-    //                });
-    //            }
-    //        }).done();
-    //};
 
     return {
         load: function (viewBag, model, activitiesPerPage) {
