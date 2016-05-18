@@ -19,7 +19,7 @@
 
 .activity {
     margin-bottom: 20px;
-    height: 250px;
+    min-height: 300px;
     background-color: lightblue;
     border-right: 1px solid red;
 }
