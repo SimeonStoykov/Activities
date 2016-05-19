@@ -9,30 +9,10 @@ var app = app || {};
 
         var activitiesView = app.activitiesViewBag.load();
 
-        var activitiesController = app.activitiesController.load(activitiesView, activitiesModel, 6);
+        var activitiesController = app.activitiesController.load(activitiesView, activitiesModel, 3);
 
         this.get('#/', function(){
             activitiesController.loadAllActivities(mainSelector);
-        });
-
-        this.bind('registerUser', function(event, data){
-            userController.register(data);
-        });
-
-        this.bind('loginUser', function(event, data){
-            userController.login(data);
-        });
-
-        this.bind('addLecture', function(event, data){
-            lecturesController.addLecture(data);
-        });
-
-        this.bind('editLecture', function(event, data){
-            lecturesController.editLecture(data);
-        });
-
-        this.bind('deleteLecture', function(event, data){
-            lecturesController.deleteLecture(data);
         });
 
     });

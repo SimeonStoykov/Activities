@@ -1,22 +1,44 @@
 <div class="container">
     <div class="row">
         {{#activities}}
-        <div class="col-md-4 activity">
-            <div class="row content-width">
-                <div class="col-md-6">by {{actorUsername}}</div>
-                <div class="col-md-6 text-right">in {{provider}}</div>
+            {{#id}}
+            <div class="col-md-4 activity">
+                <div class="row activity-header">
+                    <div class="col-xs-8 text-left">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <strong>{{actorUsername}}</strong>
+                    </div>
+                    <div class="col-xs-4 text-right"><strong>{{activityDate}}</strong></div>
+                </div>
+                <div class="row text-center">in <strong>{{provider}}</strong></div>
+                <div class="row activity-message">{{activityMessage}}</div>
+                <div class="row activity-image">
+                    {{#activityAttachment}}
+                    <img src="{{activityAttachment}}" alt="Activity image" class="img-responsive" width="300px" height="250px" />
+                    {{/activityAttachment}}
+                </div>
+                <div class="row activity-stats">
+                    <div class="col-xs-4 text-center">
+                        <a href="#" class="icon-link">
+                            <span class="glyphicon glyphicon-thumbs-up"></span>
+                        </a>
+                        {{activityLikes}}
+                    </div>
+                    <div class="col-xs-4 text-center">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-share-alt"></span>
+                        </a>
+                        {{activityShares}}
+                    </div>
+                    <div class="col-xs-4 text-center">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-comment"></span>
+                        </a>
+                        {{activityComments}}
+                    </div>
+                </div>
             </div>
-            <div class="row content-width text-center">{{activityMessage}}</div>
-            <div class="row content-width">
-                <img src="{{activityAttachment}}" alt="Image content" width="320px" height="160px" />
-            </div>
-            <div class="row content-width text-right">on {{activityDate}}</div>
-            <div class="row content-width">
-                <div class="col-md-4 text-center">Likes: {{activityLikes}}</div>
-                <div class="col-md-4 text-center">Shares: {{activityShares}}</div>
-                <div class="col-md-4 text-center">Comments: {{activityComments}}</div>
-            </div>
-        </div>
+            {{/id}}
         {{/activities}}
     </div>
     <div class="menu-wrapper">

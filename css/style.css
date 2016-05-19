@@ -1,3 +1,7 @@
+body {
+    background-color: #e9ebee;
+}
+
 .site-header {
     text-align: center;
 }
@@ -18,16 +22,39 @@
 }
 
 .activity {
-    margin-bottom: 20px;
-    min-height: 300px;
+    min-height: 500px;
     background-color: lightblue;
-    border-right: 1px solid red;
+    border-right: 10px solid #e9ebee;
+    position: relative;
+    margin-bottom: 25px;
 }
 
-div.container div.row div:nth-child(3) {
-    border-right: 0;
+.activity-header {
+    background-color: #3b5998;
+    color: #ffffff;
+    height: 40px;
+    padding-top: 10px;
 }
 
-div.container div.row div:nth-child(6) {
-    border-right: 0;
+.activity-message {
+    width: 300px;
+    margin: 20px auto;
+}
+
+.activity-image {
+    width: 300px;
+    margin: 10px auto;
+}
+
+.activity-stats {
+    position: absolute;
+    border-top: 1px solid yellow;
+    bottom: 0;
+    padding: 5px 0;
+    width: 100%;
+    margin-top: 10px;
+}
+
+a.icon-link:hover {
+    text-decoration: none;
 }
