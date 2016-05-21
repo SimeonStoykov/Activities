@@ -1,0 +1,12 @@
+var xmlHttp = new XMLHttpRequest();
+var url = "https://nuvi-challenge.herokuapp.com/activities";
+
+xmlHttp.onreadystatechange = function() {
+    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+        var activities = JSON.parse(xmlHttp.responseText);
+    }
+};
+
+xmlHttp.open("GET", url, true);
+document.cookie = 'SESSION=NUVI-12345';
+xmlHttp.send();
